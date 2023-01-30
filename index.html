@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Scroll Event</title>
+    <style>
+        table, tr, td{
+            border: 2px solid black;   
+        }
+        #table{
+            height: 200px;
+            width: 500px;
+            overflow: scroll;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" name="row" id="row" placeholder="Enter Rows Value"> <br>
+    <input type="text" name="col" id="col" placeholder="Enter Column Value"><br>
+    <button id="btn">Add Table</button>
+    <div id="table" onscroll="myScrollMethod()">
+    </div>
+</body>
+<script src="app.js" defer></script>
+</html>
