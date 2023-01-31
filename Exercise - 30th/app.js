@@ -2,6 +2,9 @@ const tableContainer = document.getElementById("table-container")
 var tusharRows = 3;
 var tusharCols = 3;
 var tusharOpacityCounter = 0.3
+var tusharTimer = document.getElementById("timer");
+var tusharScoreContainer = document.getElementById("score-container");
+var score = parseInt(localStorage.getItem("count"));
 tusharResponsibleTimer();
 function tusharResponsibleTimer() {
     var tusharTargetDate = new Date().getTime() + (1 * 60 * 1000);
@@ -10,12 +13,7 @@ function tusharResponsibleTimer() {
         var tusharDistance = tusharTargetDate - tusharNow;
 
         if (tusharDistance < 0) {
-            clearInterval(intervalX)
-            tusharResponsibleTimer();
-            tusharDrawCounter += 1;
-            tusharGameOver = true;
-            checkIsOver();
-            refershWinner();
+            window.location.reload(); 
         }
         var tusharMinutes = Math.floor((tusharDistance % (1000 * 60 * 60)) / (1000 * 60));
         var tusharSeconds = Math.floor((tusharDistance % (1000 * 60)) / (1000));
@@ -25,10 +23,13 @@ function tusharResponsibleTimer() {
     }, 1000);
 }
 generatingTable(tusharRows, tusharCols)
-
+tusharScoreContainer.innerHTML = `Win Counts: ${localStorage.getItem("count")} `
 function generatingTable(tusharRows, tusharCols) {
-    if(tusharCols > 10 && tusharRows > 10){
-        alert("Game Over")
+    if(tusharCols > 8 && tusharRows > 8){
+        alert("Game Over, you found it huh")
+        localStorage.removeItem("count");
+        localStorage.setItem("count", ++score)
+        tusharScoreContainer.innerHTML = `Win Counts: ${localStorage.getItem("count")}`
         window.location.reload();
         return;
     }
