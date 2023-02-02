@@ -23,7 +23,7 @@ here, the table we are writing with "FROM" keyword is known as Left side. So, al
 
 5. Group By with Having Keyword
 
-```SELECT City, count(*) from Student.Student_Mst group by City having count(*) > 15000;```
+`SELECT City, count(*) from Student.Student_Mst group by City having count(*) > 15000;`
 
 # SQL Functions
 
@@ -64,3 +64,33 @@ for example: Above example will return 8.
 4. min(): minimum from the column data
 
 5. count(): counts the total number of rows returned by the SQL
+
+# Join of Three tables
+`select u.name, p.name, c.category
+FROM user_mst u
+JOIN product_mst p
+ON u.p_id = p.id
+JOIN category_mst c
+ON p.cat_id = c.id`
+
+u.name brings the name of the user, p.name brings name of the product that has been purchased by the customer,  and category brings name of category.
+
+All of them are coming based on id of all columns.
+
+
+
+# Query for the Assignment Given By Chintan Sir.<!--  -->
+
+```
+SELECT p.first_name, p.last_name, p.contact_no, p.address, p.email, p.gender, p.dob,
+a.SSC, a.HSC, a.Graduate, a.PostGraduate, a.Board, a.Stream, e.company_name, e.start_date, e.end_date, e.CTC, 
+l.Hindi, l.English, l.Spanish, l.Sindhi, l.German, r.name, r.contact_no, r.linkedin_link, t.Node, t.JavaScript, t.Python,
+t.Django, t.Java, t.C, c.Current_CTC, c.Expected_CTC, c.Preferred
+FROM personal_info p
+JOIN Academic a ON a.personal_id = p.id
+JOIN Experience e ON e.personal_id = p.id
+JOIN Languages_Known l ON l.personal_id = p.id
+JOIN Reference_Tab r ON r.personal_id = p.id
+JOIN Technologies t ON t.personal_id = p.id
+JOIN CTC c ON c.personal_id = p.id
+```
