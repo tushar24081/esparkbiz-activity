@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form>
+
+        <fieldset>
+            <legend>Basic Details</legend>
+            <div id="name" class="flex">
+                <label for="fname">First Name:</label>
+                <input type="text" name="fname" id="fname" placeholder="Enter First Name" />
+
+                <label for="lname">Last Name: </label>
+                <input type="text" name="lname" id="lname" placeholder="Enter Last Name" />
+            </div>
+            <br>
+            <div id="desig" class="flex">
+                <label for="desig">Job Info: </label>
+                <input type="text" name="desig" id="desig" placeholder="Enter Designation" />
+
+                <label for="email">Email: </label>
+                <input type="email" name="email" id="email" placeholder="Enter Email" />
+            </div>
+            <br>
+
+
+            <div id="address" class="flex">
+                <label for="address1">Address 1: </label>
+                <input type="text" name="address1" id="address1" placeholder="Enter Address 1" />
+
+                <label for="address2">Address 2: </label>
+                <input type="text" name="address2" id="address2" placeholder="Enter Address2" />
+            </div>
+
+            <br>
+            <div id="city" class="flex">
+                <label for="city">City Data:</label>
+                <input type="text" name="city" id="city" placeholder="Enter City" />
+
+                <label for="ph">Phone Number: </label>
+                <input type="number" name="ph" id="ph" placeholder="Enter Phone Number" />
+            </div>
+
+            <br><br>
+            <div id="drops" class="flex">
+                <div class="flex">
+                    <label for="city">Relationship Status: </label>
+                    <select>
+                        <option value="single">Single</option>
+                        <option value="married">Married</option>
+                    </select>
+                </div>
+
+                <div class="flex">
+                    <label>State: </label>
+                    <select>
+                        <option value="guj">Gujarat</option>
+                        <option value="MH">Maharashtra</option>
+                        <option value="MP">Madhya Pradesh</option>
+                        <option value="RAJ">Rajsthan</option>
+                        <option value="PUN">Punjab</option>
+                        <option value="HR">Haryana</option>
+                    </select>
+                </div>
+
+
+            </div>
+
+
+            <br><br>
+            <div id="gender" class="flex">
+                <div class="flex radio">
+                    <label for="">Gender</label>
+                    <input type="radio" name="gender" id="gender">Male
+                    <input type="radio" name="gender" id="gender">Female
+                    <input type="radio" name="gender" id="gender">Prefer not to say
+                </div>
+                <div id="pincode">
+                    <label for="pincode">Enter Pincode: </label>
+                    <input type="text" name="pincode" id="pincode" placeholder="Enter Pincode" />
+                </div>
+                <div id="dob">
+                    <label for="">Date of Birth</label>
+                    <input type="date" name="date" id="">
+                </div>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Educational Details</legend>
+            <div id="educational-container">
+                <div>
+                    Name of Course: <input type="text" name="course" id="course"> &nbsp;
+                    Name of Board: <input type="text" name="board" id="board"> &nbsp;
+                    Passing Year: <input type="text" name="year" id="year"> &nbsp;
+                    Percentage: <input type="text" name="percentage" id="percentage"> &nbsp;
+                    <br><br>
+                </div>
+            </div>
+            <a id="add" style="padding: 10px; background-color: #444; color: #fff ;">ADD</a>
+        </fieldset>
+    </form>
+</body>
+<script src="app.js"></script>
+
+</html>
