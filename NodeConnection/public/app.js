@@ -2,15 +2,26 @@ let container = document.getElementById("educational-container");
 let expr_container = document.getElementById("experience-container");
 let lang_container = document.getElementById("lang-container");
 let tech_container = document.getElementById("tech-container");
+let educational_counter = 2;
+export let edAns;
+
 document.getElementById("add").addEventListener("click", () => {
-    const newDivForEd = document.createElement("div");
-    
-    newDivForEd.innerHTML += `<div>Name of Course: <input type="text" name="course" id="course"> &nbsp;
-    Name of Board: <input type="text" name="board" id="board"> &nbsp;
-    Passing Year: <input type="text" name="year" id="year"> &nbsp;
-    Percentage: <input type="text" name="percentage" id="percentage"> <div> &nbsp;
-    `
+    const newDivForEd = document.createElement("div");  
+    newDivForEd.classList.add("ed");  
+    newDivForEd.innerHTML = `Name of Course: <input type="text" name="course${educational_counter}" id="course"> &nbsp;
+    Name of Board: <input type="text" name="board${educational_counter}" id="board"> &nbsp;
+    Passing Year: <input type="text" name="year${educational_counter}" id="year"> &nbsp;
+    Percentage: <input type="text" name="percentage${educational_counter}" id="percentage"> <br><br>;
+    `;
+
+    educational_counter++;
     container.appendChild(newDivForEd);
+})
+
+document.getElementById("done_ed").addEventListener("click", () => {
+    let finalObjEdData = []
+    edAns = document.querySelectorAll(".ed").length;
+
 })
 
 document.getElementById("add_expr").addEventListener("click", () => {

@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <form>
+    <form method="post">
 
         <fieldset>
             <legend>Basic Details</legend>
@@ -79,9 +79,9 @@
             <div id="gender" class="flex">
                 <div class="flex radio">
                     <label for="">Gender</label>
-                    <input type="radio" name="gender" id="gender">Male
-                    <input type="radio" name="gender" id="gender">Female
-                    <input type="radio" name="gender" id="gender">Prefer not to say
+                    <input type="radio" name="gender" id="gender" value="M">Male
+                    <input type="radio" name="gender" id="gender" value="F">Female
+                    <input type="radio" name="gender" id="gender" value="O">Prefer not to say
                 </div>
                 <div id="pincode">
                     <label for="pincode">Enter Pincode: </label>
@@ -97,15 +97,16 @@
         <fieldset>
             <legend>Educational Details</legend>
             <div id="educational-container">
-                <div>
-                    Name of Course: <input type="text" name="course" id="course"> &nbsp;
-                    Name of Board: <input type="text" name="board" id="board"> &nbsp;
-                    Passing Year: <input type="text" name="year" id="year"> &nbsp;
-                    Percentage: <input type="text" name="percentage" id="percentage"> &nbsp;
+                <div class="ed">
+                    Name of Course: <input type="text" name="course1" id="course"> &nbsp;
+                    Name of Board: <input type="text" name="board1" id="board"> &nbsp;
+                    Passing Year: <input type="text" name="year1" id="year"> &nbsp;
+                    Percentage: <input type="text" name="percentage1" id="percentage"> &nbsp;
                     <br><br>
                 </div>
             </div>
             <a id="add" style="padding: 10px; background-color: #444; color: #fff ;">Add Education</a>
+            <a id="done_ed" style="padding: 10px; background-color: #444; color: #fff ;">Done Education</a>
         </fieldset>
 
         <br>
@@ -242,9 +243,10 @@
         </center>
         </fieldset>
         </div>
-
+        <input type="submit" value="Submit">
     </form>
 </body>
 <script src="app.js"></script>
+<script src="index.js"></script>
 
 </html>
