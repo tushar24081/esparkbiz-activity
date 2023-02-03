@@ -24,3 +24,7 @@ input[type="number"]{
     height: 30px;
 
 }
+
+.accent{
+    accent-color: green;
+}

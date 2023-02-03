@@ -1,0 +1,26 @@
+<input type="checkbox" name="hindi" id="hindi" onclick="updateChildren(this)"> Hindi &nbsp;&nbsp;&nbsp;&nbsp;
+<input type="checkbox" class="hindi" onclick="updateParent(this)"> Read
+<input type="checkbox" class="hindi" onclick="updateParent(this)"> Write
+<input type="checkbox" class="hindi" onclick="updateParent(this)"> Speak
+
+<script>
+function updateParent(childCheckbox) {
+  const childrenCheckboxes = document.querySelectorAll('.hindi');
+  let allChecked = true;
+  childrenCheckboxes.forEach(checkbox => {
+    if (!checkbox.checked) {
+      allChecked = false;
+    }
+  });
+
+  const parentCheckbox = document.querySelector('#hindi');
+  parentCheckbox.checked = allChecked;
+}
+
+function updateChildren(parentCheckbox) {
+  const childrenCheckboxes = document.querySelectorAll('.hindi');
+  childrenCheckboxes.forEach(checkbox => {
+    checkbox.checked = parentCheckbox.checked;
+  });
+}
+</script>

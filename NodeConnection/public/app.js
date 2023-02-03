@@ -6,8 +6,8 @@ let educational_counter = 2;
 export let edAns;
 
 document.getElementById("add").addEventListener("click", () => {
-    const newDivForEd = document.createElement("div");  
-    newDivForEd.classList.add("ed");  
+    const newDivForEd = document.createElement("div");
+    newDivForEd.classList.add("ed");
     newDivForEd.innerHTML = `Name of Course: <input type="text" name="course${educational_counter}" id="course"> &nbsp;
     Name of Board: <input type="text" name="board${educational_counter}" id="board"> &nbsp;
     Passing Year: <input type="text" name="year${educational_counter}" id="year"> &nbsp;
@@ -52,9 +52,12 @@ document.getElementById("add_lang").addEventListener("click", () => {
 })
 
 document.getElementById("add_tech").addEventListener("click", () => {
-    let tech = prompt("Enter Technology you want to add", " ");
-    const newDivForTech = document.createElement("div");
-    newDivForTech.innerHTML = `
+    let tech_data = prompt("Enter Technology you want to add", " ");
+    let tech;
+    if (tech_data) {
+        tech = tech_data;
+        const newDivForTech = document.createElement("div");
+        newDivForTech.innerHTML = `
     <div>
     <input type="checkbox" name="${tech}" id="${tech}"> ${tech} 
     <input type="radio" name="${tech}"> Beginner 
@@ -62,5 +65,7 @@ document.getElementById("add_tech").addEventListener("click", () => {
     <input type="radio" name="${tech}"> Expert
 </div><br>
     `
-    tech_container.appendChild(newDivForTech);
+        tech_container.appendChild(newDivForTech);
+    }
+
 })

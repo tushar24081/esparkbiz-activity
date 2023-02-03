@@ -129,23 +129,23 @@
                 <legend>Languages Known</legend>
                 <center>
                     <div id="lang-container">
-                        <div>
-                            <input type="checkbox" name="hindi" id="hindi" value="0"> Hindi &nbsp;&nbsp;&nbsp;&nbsp;
-                            <input type="checkbox"> Read
-                            <input type="checkbox"> Write
-                            <input type="checkbox"> Speak
+                        <div class="lang">
+                            <input type="checkbox" name="hindi" id="hindi_parent" value="0" class="accent" onclick="selectAll(this)"> Hindi &nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="checkbox" id="hindi" onclick="updateParent(this)"> Read
+                            <input type="checkbox" id="hindi" onclick="updateParent(this)"> Write
+                            <input type="checkbox" id="hindi" onclick="updateParent(this)"> Speak
                         </div><br>
-                        <div>
-                            <input type="checkbox" name="guj" id="guj"> Gujarati &nbsp;
-                            <input type="checkbox"> Read
-                            <input type="checkbox"> Write
-                            <input type="checkbox"> Speak
+                        <div class="lang">
+                            <input type="checkbox" name="guj" id="guj_parent" class="accent" onclick="selectAll(this)"> Gujarati &nbsp;
+                            <input type="checkbox" id="guj" onclick="updateParent(this)"> Read
+                            <input type="checkbox" id="guj" onclick="updateParent(this)"> Write
+                            <input type="checkbox" id="guj" onclick="updateParent(this)"> Speak
                         </div><br>
-                        <div>
-                            <input type="checkbox" name="english" id="eng"> English &nbsp;
-                            <input type="checkbox"> Read
-                            <input type="checkbox"> Write
-                            <input type="checkbox"> Speak
+                        <div class="lang">
+                            <input type="checkbox" class="accent" name="english" id="english_parent" onclick="selectAll(this)" > English &nbsp;
+                            <input type="checkbox" id="english" onclick="updateParent(this)"> Read
+                            <input type="checkbox" id="english" onclick="updateParent(this)"> Write
+                            <input type="checkbox" id="english" onclick="updateParent(this)"> Speak
                         </div><br>
                     </div>
                     <a id="add_lang" style="padding: 10px; background-color: #444; color: #fff ;">Add Languages</a>
